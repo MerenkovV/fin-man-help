@@ -28,8 +28,8 @@ export default function FirstTask() {
         <Input onChange={(e:ChangeEvent<HTMLInputElement>)=>{ChangeHandler(3, e.target.value)}} addonBefore="Получим рублей - " addonAfter="руб." placeholder="" value={state.roubles ? state.roubles : ''} />
         <Input onChange={(e:ChangeEvent<HTMLInputElement>)=>{ChangeHandler(4, e.target.value)}} addonBefore="Частота капитализации - " addonAfter="раз в год" placeholder="" value={state.capitalization ? state.capitalization : ''} />
         <div className={style.MathJaxInside}>
-          <MathComponent display = {false} tex={String.raw`P=\frac{${state.roubles}}{(1 + \frac{${Number(state.percent)/100}}{${state.capitalization}})^{${state.capitalization} * ${state.years}}}`}/>
-          <span style={{fontSize: "30px"}}>={formula.toFixed(3)}</span>
+          <MathComponent display = {false} tex={String.raw`P=\frac{${state.roubles}}{(1 + \frac{${Number(state.percent)/100}}{${state.capitalization}})^{${state.capitalization} × ${state.years}}}`}/>
+          <span>= {formula.toFixed(3)}</span>
         </div>
     </div>
   )
