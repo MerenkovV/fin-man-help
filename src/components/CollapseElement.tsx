@@ -20,7 +20,8 @@ const CollapseElement = (props:PropsType) => {
                     colorBgContainer: "#303030",
                     colorBorderSecondary: "#5956ff",
                     colorText: "white",
-                    colorTextPlaceholder: "#c2c2c2"
+                    colorTextPlaceholder: "#c2c2c2",
+                    colorBgElevated: "#303030",
                 },
             }}
         >

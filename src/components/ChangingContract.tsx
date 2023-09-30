@@ -21,7 +21,7 @@ export default function ChangingContract() {
         {   key: 3,
             showArrow: false,
             label: <Card style={{ marginLeft: "0px" }} hoverable title={<span className={CardStyle.title}>Задача 3</span>}><span className={CardStyle.subtitle}>Господин Н. положил 3 года назад 5000 руб. в банк, начисляющий каждое полугодие 11 % годовых. Год назад он положил еще 2000 руб., а через 3 года 6 месяцев после этого снял со счета 3500 руб. Спустя 6 месяцев он желает положить на свой счет такую сумму, чтобы еще через год на счету было 10 000. Какую сумму он должен положить на свой счет в последний раз?</span></Card>,
-            children: "Потом сделаю"
+            children: "Почти то же, что и выше"
         }
     ]
 
