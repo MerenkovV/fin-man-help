@@ -20,7 +20,8 @@ export default function FourthTask() {
             time: position === 4 ? newValue : state.time
         })
     }
-    let formula = ((1-(Number(state.income))/(Number(state.cost))) * 365)/(Number(state.duration) - Number(state.time))
+    let formula1 = ((1-(Number(state.income))/(Number(state.cost))) * 365)/(Number(state.duration) - Number(state.time))
+    let formula2 = Number(state.cost)*(1 + formula1 * (Number(state.duration)/365))
   return (
     <div>
         <Input onChange={(e:ChangeEvent<HTMLInputElement>)=>{ChangeHandler(1, e.target.value)}} addonBefore="Стоимость векселя - " addonAfter="руб." placeholder="" value={state.cost ? state.cost : ''} />
@@ -30,8 +31,14 @@ export default function FourthTask() {
         <div className={style.MathJaxInside}>
             <span>Используем формулу:</span><br/>
             <MathComponent display = {false} tex={String.raw`P= S(1 - d\frac{t}{T})`}/><br/>
-            <MathComponent display = {false} tex={String.raw`d= \frac{(-\frac{${state.income}}{${state.cost}} + 1)× 365}{(${state.duration} - ${state.time})})`}/>
-            <span>= {formula.toFixed(3)} = {(formula * 100).toFixed(1)}%</span>
+            <span>Учётная ставка:</span><br/>
+            <MathComponent display = {false} tex={String.raw`d= \frac{(-\frac{${state.income}}{${state.cost}} + 1)× 365}{(${state.duration} - ${state.time})}`}/>
+            <span>= {formula1.toFixed(3)} = {(formula1 * 100).toFixed(1)}%</span><br/>
+            <span>Банк получит:</span><br/>
+            <MathComponent display = {false} tex={String.raw`S= \frac{P}{(1 - d\frac{t}{T})}`}/>
+            <MathComponent display = {false} tex={String.raw`= ${state.cost}×(1 + ${formula1.toFixed(3)}\frac{${state.duration}}{365}) - ${state.income}`}/>
+            <span>= {formula2.toFixed(3)} - {state.income}</span><br/>
+            <span>= {(formula2 - Number(state.income)).toFixed(3)}</span><br/>
         </div>
     </div>
   )

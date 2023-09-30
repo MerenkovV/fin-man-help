@@ -1,8 +1,9 @@
-import React from 'react';
 import { Tabs, ConfigProvider } from 'antd';
 import type { TabsProps } from 'antd';
 import Discont from './components/Discont';
 import MainStyle from './css/Main.module.css'
+import Equivalence from './components/Equivalence';
+import ChangingContract from './components/ChangingContract';
 
 function App() {
   const items: TabsProps['items'] = [
@@ -13,13 +14,13 @@ function App() {
     },
     {
       key: '2',
-      label: 'Tab 2',
-      children: 'Content of Tab Pane 2',
+      label: 'Эквивалентность процентных ставок',
+      children: <Equivalence/>,
     },
     {
       key: '3',
-      label: 'Tab 3',
-      children: 'Content of Tab Pane 3',
+      label: 'Изменение условий контракта',
+      children: <ChangingContract/>,
     },
   ];
   return (
