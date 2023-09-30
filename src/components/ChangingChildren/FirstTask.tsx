@@ -61,12 +61,9 @@ export default function FirstTask() {
         <span>Считаем:</span><br/>
         <MathComponent display = {false} tex={String.raw`S_{${state.years1}} + S_{${state.years2}}=${sumOfDiscontPrev.toFixed(3)}`}/><br/>
         <span>Тогда:</span><br/>
-        <MathComponent display = {false} tex={String.raw`X=\frac{${sumOfDiscontPrev.toFixed(3)}}{\frac{X}{${discontS1.toFixed(3)}} + \frac{X}{${discontS3.toFixed(3)}}}`}/><MathComponent display = {false} tex={String.raw`=\frac{${sumOfDiscontPrev.toFixed(3)}}{${sumOfDiscontNext.toFixed(3)}}`}/>
+        <MathComponent display = {false} tex={String.raw`X=\frac{${sumOfDiscontPrev.toFixed(3)}}{\frac{1}{${discontS1.toFixed(3)}} + \frac{1}{${discontS3.toFixed(3)}}}`}/><MathComponent display = {false} tex={String.raw`=\frac{${sumOfDiscontPrev.toFixed(3)}}{${sumOfDiscontNext.toFixed(3)}}`}/>
         <span>= {(sumOfDiscontPrev/sumOfDiscontNext).toFixed(3)}</span><br/>
 
-        
-          {/* <MathComponent display = {false} tex={String.raw`d=\frac{(1-\frac{1}{1+${Number(state.percent)/100}\frac{${state.years}}{12}})×12}{${state.years}}`}/>
-          <span>= {formula.toFixed(3)} = {(formula * 100).toFixed(1)}%</span> */}
         </div>
     </div>
   )
