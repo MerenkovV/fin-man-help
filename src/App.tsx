@@ -5,6 +5,7 @@ import MainStyle from './css/Main.module.css'
 import Equivalence from './components/Equivalence';
 import ChangingContract from './components/ChangingContract';
 import Obligations from './components/Obligations';
+import Credits from './components/Credits';
 
 function App() {
   const items: TabsProps['items'] = [
@@ -27,6 +28,11 @@ function App() {
       key: '4',
       label: 'Облигации',
       children: <Obligations/>,
+    },
+    {
+      key: '5',
+      label: 'Кредиты',
+      children: <Credits/>,
     },
   ];
   return (

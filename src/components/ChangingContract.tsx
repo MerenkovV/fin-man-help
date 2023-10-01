@@ -18,11 +18,11 @@ export default function ChangingContract() {
             label: <Card style={{ marginLeft: "0px" }} hoverable title={<span className={CardStyle.title}>Задача 2</span>}><span className={CardStyle.subtitle}>Господин Н. вложил в банк ... рублей. Банк начисляет ... % годовых (начисление процентов ... раз в год). Через ... месяцев господин Н. снял со счета ... рублей, а через ... года закрыл счет. Какую сумму он получил при закрытии счета?</span></Card>,
             children: <SecondTask/>
         },
-        {   key: 3,
-            showArrow: false,
-            label: <Card style={{ marginLeft: "0px" }} hoverable title={<span className={CardStyle.title}>Задача 3</span>}><span className={CardStyle.subtitle}>Господин Н. положил 3 года назад 5000 руб. в банк, начисляющий каждое полугодие 11 % годовых. Год назад он положил еще 2000 руб., а через 3 года 6 месяцев после этого снял со счета 3500 руб. Спустя 6 месяцев он желает положить на свой счет такую сумму, чтобы еще через год на счету было 10 000. Какую сумму он должен положить на свой счет в последний раз?</span></Card>,
-            children: "Почти то же, что и выше"
-        }
+        // {   key: 3,
+        //     showArrow: false,
+        //     label: <Card style={{ marginLeft: "0px" }} hoverable title={<span className={CardStyle.title}>Задача 3</span>}><span className={CardStyle.subtitle}>Господин Н. положил 3 года назад 5000 руб. в банк, начисляющий каждое полугодие 11 % годовых. Год назад он положил еще 2000 руб., а через 3 года 6 месяцев после этого снял со счета 3500 руб. Спустя 6 месяцев он желает положить на свой счет такую сумму, чтобы еще через год на счету было 10 000. Какую сумму он должен положить на свой счет в последний раз?</span></Card>,
+        //     children: "Почти то же, что и выше"
+        // }
     ]
 
     return (

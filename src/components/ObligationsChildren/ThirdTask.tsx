@@ -25,8 +25,8 @@ export default function ThirdTask() {
   return (
     <div>
         <Input onChange={(e:ChangeEvent<HTMLInputElement>)=>{ChangeHandler(1, e.target.value)}} addonBefore="Куплено за - " addonAfter="%" placeholder="" value={state.percent ? state.percent : ''} />
-        <Input onChange={(e:ChangeEvent<HTMLInputElement>)=>{ChangeHandler(2, e.target.value)}} addonBefore="Продано через - " addonAfter="дней" placeholder="" value={state.duration ? state.duration : ''} />
         <Input onChange={(e:ChangeEvent<HTMLInputElement>)=>{ChangeHandler(3, e.target.value)}} addonBefore="Срок облигации - " addonAfter="дней" placeholder="" value={state.time ? state.time : ''} />
+        <Input onChange={(e:ChangeEvent<HTMLInputElement>)=>{ChangeHandler(2, e.target.value)}} addonBefore="Продано через - " addonAfter="дней" placeholder="" value={state.duration ? state.duration : ''} />
         <Input onChange={(e:ChangeEvent<HTMLInputElement>)=>{ChangeHandler(4, e.target.value)}} addonBefore="Продано за - " addonAfter="%" placeholder="" value={state.profitability ? state.profitability : ''} />
 
         <div className={style.MathJaxInside}><br/>

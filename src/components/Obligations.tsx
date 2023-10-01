@@ -17,17 +17,17 @@ export default function Obligations() {
         },
         {   key: 2,
             showArrow: false,
-            label: <Card style={{ marginLeft: "0px" }} hoverable title={<span className={CardStyle.title}>Задача 2</span>}><span className={CardStyle.subtitle}>Облигация куплена по курсу 85 % и будет погашена через 10 лет после покупки. Ежегодные купонные платежи (проценты) выплачиваются в конце года по ставке 5 % годовых от номинальной стоимости облигации. Рассчитайте доходность приобретения этой облигации.</span></Card>,
+            label: <Card style={{ marginLeft: "0px" }} hoverable title={<span className={CardStyle.title}>Задача 2</span>}><span className={CardStyle.subtitle}>Облигация куплена по курсу ... % и будет погашена через ... лет после покупки. Ежегодные купонные платежи (проценты) выплачиваются в конце года по ставке ... % годовых от номинальной стоимости облигации. Рассчитайте доходность приобретения этой облигации.</span></Card>,
             children: <SecondTask/>
         },
         {   key: 3,
             showArrow: false,
-            label: <Card style={{ marginLeft: "0px" }} hoverable title={<span className={CardStyle.title}>Задача 3</span>}><span className={CardStyle.subtitle}>Номинал облигации (неважно...) рублей. Облигация трехмесячная, куплена за ... %, продана через ... дней за ... %. Покупатель держал до погашения. Кто обеспечил себе большую доходность?</span></Card>,
+            label: <Card style={{ marginLeft: "0px" }} hoverable title={<span className={CardStyle.title}>Задача 3</span>}><span className={CardStyle.subtitle}>Номинал облигации (неважно сколько) рублей. Облигация на ... дней, куплена за ... %, продана через ... дней за ... %. Покупатель держал до погашения. Кто обеспечил себе большую доходность?</span></Card>,
             children: <ThirdTask/>
         },
         {   key: 4,
             showArrow: false,
-            label: <Card style={{ marginLeft: "0px" }} hoverable title={<span className={CardStyle.title}>Задача 4</span>}><span className={CardStyle.subtitle}>Определить, за какую цену Вы должны купить облигацию, если желаете обеспечить себе доходность 60 % годовых. До момента погашения 73 дня</span></Card>,
+            label: <Card style={{ marginLeft: "0px" }} hoverable title={<span className={CardStyle.title}>Задача 4</span>}><span className={CardStyle.subtitle}>Определить, за какую цену Вы должны купить облигацию, если желаете обеспечить себе доходность ... % годовых. До момента погашения ... дня</span></Card>,
             children: <FourthTask/>
         },
     ]
