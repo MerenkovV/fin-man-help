@@ -6,6 +6,7 @@ import Equivalence from './components/Equivalence';
 import ChangingContract from './components/ChangingContract';
 import Obligations from './components/Obligations';
 import Credits from './components/Credits';
+import Inflation from './components/Inflation';
 
 function App() {
   const items: TabsProps['items'] = [
@@ -33,6 +34,11 @@ function App() {
       key: '5',
       label: 'Кредиты',
       children: <Credits/>,
+    },
+    {
+      key: '6',
+      label: 'Модели инфляции',
+      children: <Inflation/>,
     },
   ];
   return (

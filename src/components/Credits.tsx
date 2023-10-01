@@ -3,6 +3,7 @@ import CardStyle from '../css/Card.module.css'
 import FirstTask from './CreditsChildren/FirstTask';
 import SecondTask from './CreditsChildren/SecondTask';
 import ThirdTask from './CreditsChildren/ThirdTask';
+import FourthTask from './CreditsChildren/FourthTask';
 import CollapseElement from './CollapseElement';
 import { ItemType } from './Discont';
 
@@ -23,6 +24,11 @@ export default function Credits() {
             showArrow: false,
             label: <Card style={{ marginLeft: "0px" }} hoverable title={<span className={CardStyle.title}>Задача 3</span>}><span className={CardStyle.subtitle}>Ссуда размером ... тыс. рублей выдана на ... года под ... % годовых. Должник по контракту обязан выплачивать долг равными долями вместе с процентами. Рассчитайте сумму платежей (... раз в год)</span></Card>,
             children: <ThirdTask/>
+        },
+        {   key: 4,
+            showArrow: false,
+            label: <Card style={{ marginLeft: "0px" }} hoverable title={<span className={CardStyle.title}>Задача 4</span>}><span className={CardStyle.subtitle}>Взяли кредит ... рублей на ... лет. Ставка - ...% годовых. Платёж ежемесячный. Через ... дней заплатили ... рублей, ещё через ... дней заплатили ... рублей. Сколько нужно будет заплатить еще через ... дней?</span></Card>,
+            children: <FourthTask/>
         },
     ]
 
