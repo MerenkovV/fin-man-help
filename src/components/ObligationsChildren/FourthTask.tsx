@@ -17,6 +17,7 @@ export default function FourthTask() {
         })
     }
     let formula1 = 100/(((Number(state.percent)*Number(state.duration))/(100*365))+1)
+    let formula2 = ((1 - (formula1/100))*365)/(Number(state.duration))
   return (
     <div>
         <Input onChange={(e:ChangeEvent<HTMLInputElement>)=>{ChangeHandler(1, e.target.value)}} addonBefore="Доходность - " addonAfter="%" placeholder="" value={state.percent ? state.percent : ''} />
@@ -37,7 +38,10 @@ export default function FourthTask() {
           <MathComponent display = {false} tex={String.raw`${state.percent}=\frac{100 - X}{X}×\frac{365}{${state.duration}}×100%`}/><br/>
           <span>Преобразуем и подставляем:</span><br/>
           <MathComponent display = {false} tex={String.raw`X=\frac{100}{\frac{${state.percent}×${state.duration}}{100×365}+1}`}/>
-          <span>= {formula1.toFixed(2)}%</span>
+          <span>= {formula1.toFixed(2)}%</span><br/>
+          <span>Если у вас вексель, добавляется еще одно действие</span><br/>
+          <MathComponent display = {false} tex={String.raw`d=\frac{(1-X)T}{t}=\frac{(1-${formula1.toFixed(2)})×365}{${state.duration}}`}/>
+          <span>= {(formula2*100).toFixed(2)}%</span><br/>
         </div>
     </div>
   )

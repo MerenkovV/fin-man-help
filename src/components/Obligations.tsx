@@ -27,7 +27,7 @@ export default function Obligations() {
         },
         {   key: 4,
             showArrow: false,
-            label: <Card style={{ marginLeft: "0px" }} hoverable title={<span className={CardStyle.title}>Задача 4</span>}><span className={CardStyle.subtitle}>Определить, за какую цену Вы должны купить облигацию, если желаете обеспечить себе доходность ... % годовых. До момента погашения ... дня</span></Card>,
+            label: <Card style={{ marginLeft: "0px" }} hoverable title={<span className={CardStyle.title}>Задача 4</span>}><span className={CardStyle.subtitle}>Определить, за какую цену Вы должны купить облигацию (вексель), если желаете обеспечить себе доходность ... % годовых. До момента погашения ... дня</span></Card>,
             children: <FourthTask/>
         },
     ]
